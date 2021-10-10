@@ -1,79 +1,39 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>SplatSpace - Donate</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href=".\index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href=".\membership.html">Become A Member</a></li>
-                <li class="nav-item dropdown">
-                    <a class=" nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop" href="#">About</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href=".\about.html">About SplatSpace</a>
-                        <a class="dropdown-item" href=".\equipment.html">Equipment</a>
-                        <a class="dropdown-item" href=".\contact.html">Contact</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" href=".\currentmembers.html">Current Members</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop" href="#">Donate</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item active" href="#">Donate</a>
-                        <a class="dropdown-item" href=".\contributors.html">Contributors</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://splatspace.miraheze.org/wiki/Main_Page" target="_blank">Wiki</a></li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="https://www.meetup.com/splatspace/" target="_blank"><img src="media/icons/meetup.svg" height="25px" width="25px" alt="Meetup"/></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/splatspace/" target="_blank"><img src="media/icons/instagram.svg" height="25px" width="25px" alt="Instagram"/></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/splat_space" target="_blank"><img src="media/icons/twitter.svg" height="25px" width="25px" alt="Twitter"/></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/channel/UC0be80d83KXrjhMe0FahJrg" target="_blank"><img src="media/icons/youtube.svg" height="25px" width="25px" alt="YouTube"/></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/splatspace/" target="_blank"><img src="media/icons/facebook.svg" height="25px" width="25px" alt="Facebook"/></a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <div class="jumbotron text-center">
-                <h2>Donate!</h2>
-            </div>
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <div class="jumbotron text-center">
+        <h2>Donate!</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p>Splat Space is a non-profit organization that intends to provide tools and a community for makers, artists and hackers in the RTP community. If you are interested in donating and helping us out, please click on the donate button below.</p>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p>Splat Space is a non-profit organization that intends to provide tools and a community for makers, artists and hackers in the RTP community. If you are interested in donating and helping us out, please click on the donate button below.</p>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col">
-                    <button class="btn-primary btn-lg">Reoccurring Donation</button>
-                </div>
-                <div class="col">
-                    <button class="btn-primary btn-lg">One-Time Donation</button>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col">
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p>SplatSpace is also a charity listed on Amazon Smile! Amazon will donate 0.5% of the purchase price of items you buy. That adds up quick!</p>
-                    <p>Click the button below to assign SplatSpace as your charity on Amazon Smile.</p>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col">
-                    <a href="https://smile.amazon.com/ch/27-3411181" target="_blank"><button class="btn btn-outline-primary"><img src="media\images\amazon-smile-300x80-1.png"></button></a>
-                </div>
-            </div>
+    </div>
+    <div class="row text-center">
+        <div class="col">
+            <button class="btn-primary btn-lg">Reoccurring Donation</button>
         </div>
-    </body>
-</html>
+        <div class="col">
+            <button class="btn-primary btn-lg">One-Time Donation</button>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>SplatSpace is also a charity listed on Amazon Smile! Amazon will donate 0.5% of the purchase price of items you buy. That adds up quick!</p>
+            <p>Click the button below to assign SplatSpace as your charity on Amazon Smile.</p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col">
+            <a href="https://smile.amazon.com/ch/27-3411181" target="_blank"><button class="btn btn-outline-primary"><img src="media\images\amazon-smile-300x80-1.png"></button></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

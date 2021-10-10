@@ -1,119 +1,79 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>SplatSpace - Membership</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href=".\index.html">Home</a></li>
-                <li class="nav-item active"><a class="nav-link" href=".\membership.html">Become A Member</a></li>
-                <li class="nav-item dropdown">
-                    <a class=" nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop" href="#">About</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href=".\about.html">About SplatSpace</a>
-                        <a class="dropdown-item" href=".\equipment.html">Equipment</a>
-                        <a class="dropdown-item" href=".\contact.html">Contact</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" href=".\currentmembers.html">Current Members</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop" href="#">Donate</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href=".\donate.html">Donate</a>
-                        <a class="dropdown-item" href=".\contributors.html">Contributors</a>
-                    </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="https://splatspace.miraheze.org/wiki/Main_Page" target="_blank"">Wiki</a></li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="https://www.meetup.com/splatspace/" target="_blank"><img src="media/icons/meetup.svg" height="25px" width="25px" alt="Meetup"/></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/splatspace/" target="_blank"><img src="media/icons/instagram.svg" height="25px" width="25px" alt="Instagram"/></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://twitter.com/splat_space" target="_blank"><img src="media/icons/twitter.svg" height="25px" width="25px" alt="Twitter"/></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/channel/UC0be80d83KXrjhMe0FahJrg" target="_blank"><img src="media/icons/youtube.svg" height="25px" width="25px" alt="YouTube"/></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/splatspace/" target="_blank"><img src="media/icons/facebook.svg" height="25px" width="25px" alt="Facebook"/></a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <div class="row pt-2">
-                <div class="col text-center">
-                    <h2>Become a member</h2>
-                    <hr>
-                </div>
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <div class="row pt-2">
+        <div class="col text-center">
+            <h2>Become a member</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row pb-4">
+        <div class="col text-center">
+           <h5>We offer various levels of membership to fit your needs</h5>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4>Full</h4>
             </div>
-            <div class="row pb-4">
-                <div class="col text-center">
-                   <h5>We offer various levels of membership to fit your needs</h5>
-                </div>
+            <div class="card-body">
+                <h4>$60 / mo</h4>
+                <ul class="">
+                    <li>24x7 Access</li>
+                    <li>Invitation to all Splat Space meetings</li>
+                    <li>Free or discounted workshops and classes (minus materials)</li>
+                    <li>Free access to hold meetings at the space</li>
+                    <li>Full voting rights at all meetings</li>
+                </ul>
+                <button class="btn btn-primary btn-lg">Full Membership</button>
             </div>
         </div>
-        <div class="container">
-            <div class="card-deck mb-3 text-center">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4>Full</h4>
-                    </div>
-                    <div class="card-body">
-                        <h4>$60 / mo</h4>
-                        <ul class="">
-                            <li>24x7 Access</li>
-                            <li>Invitation to all Splat Space meetings</li>
-                            <li>Free or discounted workshops and classes (minus materials)</li>
-                            <li>Free access to hold meetings at the space</li>
-                            <li>Full voting rights at all meetings</li>
-                        </ul>
-                        <button class="btn btn-primary btn-lg">Full Membership</button>
-                    </div>
-                </div>
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4>Associate</h4>
-                    </div>
-                    <div class="card-body">
-                        <h4>$25 / mo</h4>
-                        <ul class="">
-                            <li>Limited access to the space</li>
-                            <li>Same benefits as the Full membership</li>
-                        </ul>
-                        <button class="btn btn-primary btn-lg">Associate Membership</button>
-                    </div>
-                </div>
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header">
-                        <h4>Student</h4>
-                    </div>
-                    <div class="card-body">
-                        <h4>$35 / mo</h4>
-                        <ul class="">
-                            <li>All the benefits and access as the Full membership at a discounted rate for students</li>
-                        </ul>
-                        <button class="btn btn-primary btn-lg">Student Membership</button>
-                    </div>
-                </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4>Associate</h4>
             </div>
+            <div class="card-body">
+                <h4>$25 / mo</h4>
+                <ul class="">
+                    <li>Limited access to the space</li>
+                    <li>Same benefits as the Full membership</li>
+                </ul>
+                <button class="btn btn-primary btn-lg">Associate Membership</button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4>Student</h4>
+            </div>
+            <div class="card-body">
+                <h4>$35 / mo</h4>
+                <ul class="">
+                    <li>All the benefits and access as the Full membership at a discounted rate for students</li>
+                </ul>
+                <button class="btn btn-primary btn-lg">Student Membership</button>
+            </div>
+        </div>
+    </div>
 
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col align-items-center">
+            <hr>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col align-items-center">
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col align-items-center pb-2">
-                    Full and Student members receive a key fob for full access. There is a $15 refundable deposit.
-                </div>
-            </div>
-            <div class="row">
-                <div class="col align-items-center">
-                    <button class="btn btn-primary btn-lg">$15 Key Fob Deposit</button>
-                </div>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col align-items-center pb-2">
+            Full and Student members receive a key fob for full access. There is a $15 refundable deposit.
         </div>
-    </body>
-</html>
+    </div>
+    <div class="row">
+        <div class="col align-items-center">
+            <button class="btn btn-primary btn-lg">$15 Key Fob Deposit</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
