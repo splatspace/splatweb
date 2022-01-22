@@ -34,8 +34,9 @@
             </form>
         </div>
         <div class="modal-footer">
+          <div class="g-recaptcha" data-sitekey="your_site_key"></div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-primary" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>Submit</button>
         </div>
       </div>
     </div>
