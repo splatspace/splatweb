@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block body %}
+<!--TODO: Use lookup pricing-->
 <div class="container">
     <div class="jumbotron text-center">
         <h2>Become a member</h2>
@@ -18,14 +19,14 @@
             </div>
             <div class="card-body">
                 <h4>$60 / mo</h4>
-                <ul class="">
+                <ul class="text-left">
                     <li>24x7 Access</li>
                     <li>Invitation to all Splat Space meetings</li>
                     <li>Free or discounted workshops and classes (minus materials)</li>
                     <li>Free access to hold meetings at the space</li>
                     <li>Full voting rights at all meetings</li>
                 </ul>
-                <button class="btn btn-primary btn-lg">Full Membership</button>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#fullModal">Full Membership</button>
             </div>
         </div>
         <div class="card mb-4 shadow-sm">
@@ -34,11 +35,11 @@
             </div>
             <div class="card-body">
                 <h4>$25 / mo</h4>
-                <ul class="">
+                <ul class="text-left">
                     <li>Limited access to the space</li>
                     <li>Same benefits as the Full membership</li>
                 </ul>
-                <button class="btn btn-primary btn-lg">Associate Membership</button>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#associateModal">Associate Membership</button>
             </div>
         </div>
         <div class="card mb-4 shadow-sm">
@@ -47,10 +48,10 @@
             </div>
             <div class="card-body">
                 <h4>$35 / mo</h4>
-                <ul class="">
+                <ul class="text-left">
                     <li>All the benefits and access as the Full membership at a discounted rate for students</li>
                 </ul>
-                <button class="btn btn-primary btn-lg">Student Membership</button>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#studentModal">Student Membership</button>
             </div>
         </div>
     </div>
@@ -69,7 +70,112 @@
     </div>
     <div class="row">
         <div class="col align-items-center">
-            <button class="btn btn-primary btn-lg">$15 Key Fob Deposit</button>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#keyfobModal">$15 Key Fob Deposit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="keyfobModal" tabindex="-1" role="dialog" aria-labelledby="keyfobModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="keyfobModalLabel">Keyfob deposit</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                This $15 refundable deposit is for the key fob that unlocks the doors for SplatSpace. <br /><br />
+                <div class="form-group">
+                    <label for="keyfobEmail">Email</label>
+                    <input type="email" class="form-control" id="keyfobEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="fullModal" tabindex="-1" role="dialog" aria-labelledby="fullModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="fullModalLabel">Full Membership</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                Full Membership <br /><br />
+                <div class="form-group">
+                    <label for="keyfobEmail">Email</label>
+                    <input type="email" class="form-control" id="keyfobEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="associateModal" tabindex="-1" role="dialog" aria-labelledby="associateModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="associateModalLabel">Associate Membership</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                Associate Membership <br /><br />
+                <div class="form-group">
+                    <label for="keyfobEmail">Email</label>
+                    <input type="email" class="form-control" id="keyfobEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="studentModal" tabindex="-1" role="dialog" aria-labelledby="studentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="studentModalLabel">Student Membership</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                Student Membership <br /><br />
+                <div class="form-group">
+                    <label for="keyfobEmail">Email</label>
+                    <input type="email" class="form-control" id="keyfobEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+        </div>
         </div>
     </div>
 </div>
