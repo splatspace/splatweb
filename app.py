@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template, url_for
+import stripe
 
 app = Flask(__name__)
 
