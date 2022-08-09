@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <div class="jumbotron text-center">
+        <h2>Subscription Success!</h2>
+    </div>
+    <div class="row">
+        <div class="col">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Your payment has been accepted! Thanks for becoming a member of Splat Space! We look forward to see what you create!
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form action="/create-portal-session" method="POST">
+                <input type="hidden" id="session-id" name="session_id" value="" />
+                <button id="checkout-and-portal-button" type="submit">Manage your billing information</button>
+              </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

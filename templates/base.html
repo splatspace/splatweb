@@ -2,21 +2,22 @@
 <html>
     <head>
         {% block head %}
-        <title>SplatSpace</title>
+        <title>Splat Space</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <!-- <script src="client.js" defer></script> -->
+        <script src="{{url_for('static',filename='client.js')}}" defer></script>
         {% endblock %}
     </head>
     <body>
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"><a class="nav-link" href="{{url_for('home')}}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{url_for('membership')}}">Become A Member</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('membership')}}"><h5 class="text-white">Become A Member</h5></a></li>
                 <li class="nav-item dropdown">
                     <a class=" nav-link dropdown-toggle" data-toggle="dropdown" id="navbardrop" href="#">About</a>
                     <div class="dropdown-menu">
@@ -45,5 +46,10 @@
         </nav>
         {% block body %}
         {% endblock %}
+        <footer class="footer bg-light">
+            <div class="container">
+                <span class="text-muted">&copy;Splat Space 2022</span>
+            </div>
+        </footer>
     </body>
 </html>
